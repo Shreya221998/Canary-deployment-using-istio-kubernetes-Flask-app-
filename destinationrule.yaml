@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: flask-destinationrule
+spec:
+  host: lbservice
+  subsets:
+  - name: subset-v1
+    labels:
+      version: v1
+  - name: subset-v2
+    labels:
+      version: v2

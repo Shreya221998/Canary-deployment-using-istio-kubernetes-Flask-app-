@@ -1,0 +1,4 @@
+From python:latest
+Run pip install flask
+ADD version1app.py /
+CMD [“python3”, “/version1app.py”]
